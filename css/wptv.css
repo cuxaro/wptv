@@ -1,0 +1,50 @@
+/* 
+Guide of elements in plugin
+
+.wptv_novideos
+
+.wptv_container
+
+article.wptv_item
+p.wptv_item__title
+video.wptv_item__video
+a.wptv_item__title
+span.wptv_item__date
+
+*/
+
+article.wptv_item {
+  display: grid;
+
+  grid-template-areas:
+    "header     header      header      header"
+    "main       main        main        main"
+    "footer1    footer1     footer2     footer2";
+
+  margin-bottom: 2rem;
+  border-bottom-style: groove;
+  border-bottom-color: rgb(216, 216, 216);
+  border-bottom-width: 0.1rem;
+
+  /* box-shadow: 0 8px 6px -6px black; */
+}
+
+p.wptv_item__title {
+  grid-area: header;
+  font-size: 2.2rem;
+  font-weight: 300;
+  color: #333333;
+}
+video.wptv_item__video {
+  grid-area: main;
+  box-shadow: 0 8px 6px -6px black;
+  margin-bottom: 2rem;
+}
+a.wptv_item__title {
+  grid-area: footer1;
+}
+span.wptv_item__date {
+  grid-area: footer2;
+  font-size: 1.4rem;
+  font-weight: 200;
+}
